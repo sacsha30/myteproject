@@ -20,13 +20,13 @@ public class Timesheet {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("");
+		driver.get(PropertiesUtil.getProperty("url"));
 
 		WebElement username = driver.findElement(By.name("UserName"));
 		WebElement password = driver.findElement(By.name("Password"));
 
-		username.sendKeys("");
-		password.sendKeys("");
+		username.sendKeys(PropertiesUtil.getProperty("username"));
+		password.sendKeys(PropertiesUtil.getProperty("password"));
 
 		WebElement signInBtn = driver.findElement(By.id("submitButton"));
 		signInBtn.click();

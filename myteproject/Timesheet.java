@@ -20,12 +20,12 @@ public class Timesheet {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://myte.accenture.com");
+		driver.get("");
 
 		WebElement username = driver.findElement(By.name("UserName"));
 		WebElement password = driver.findElement(By.name("Password"));
 
-		username.sendKeys("s.r.sharma");
+		username.sendKeys("");
 		password.sendKeys("");
 
 		WebElement signInBtn = driver.findElement(By.id("submitButton"));
